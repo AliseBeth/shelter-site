@@ -123,7 +123,9 @@ time, mark, audio, video {
     border-bottom: #F1CDB3 solid;
     padding-bottom: 5px;
 }
-
+.burger {
+    display: none;
+}
 
 @media (min-width: 768px) and (max-width: 1279px){
     .head-info p {
