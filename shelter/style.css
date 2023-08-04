@@ -123,9 +123,7 @@ time, mark, audio, video {
     border-bottom: #F1CDB3 solid;
     padding-bottom: 5px;
 }
-.burger {
-    display: none;
-}
+
 
 @media (min-width: 768px) and (max-width: 1279px){
     .head-info p {
@@ -144,18 +142,17 @@ time, mark, audio, video {
         width: 94%;
         padding: 4% 3% 0% 3%;
     }
-    
     .burger {
         display: flex;
         transition: 1s;
         position: relative;
         z-index: 2;
-        
     }
     .burger-turn {
         transform: rotate(-90deg);
         transition: 1s;
     }
+
     .nav-break {
         display: flex;
         flex-direction: column;
@@ -164,8 +161,8 @@ time, mark, audio, video {
         height: 50vh;
         position: absolute;
         z-index: 2;
-        right: -100%;
-        top:0;
+        right: 0;
+        top: -1500%;
         background-color: #292929;
         padding-top: calc(50vh - 163px);
         padding-bottom: calc(50vh - 163px);
@@ -174,7 +171,7 @@ time, mark, audio, video {
         transition: 1s;
     }
     .nav-break.nav-break-new {
-        right: 0;
+        top: 0;
         transition: 1s;
     } 
     .nav-break .li-page {
@@ -1218,9 +1215,6 @@ footer {
         width: 94%;
         padding: 4% 3%;
     }
-    .none {
-        display: none;
-    }
     
     .header-nav {
         display: flex;
@@ -1230,8 +1224,8 @@ footer {
         height: 50vh;
         position: absolute;
         z-index: 1;
-        right: -100%;
-        top:0;
+        right: 0;
+        top:-150%;
         background-color: #fffcfc;
         padding-top: calc(50vh - 163px);
         padding-bottom: calc(50vh - 163px);
@@ -1240,7 +1234,7 @@ footer {
         transition: 1s;
     } 
     .header-nav-new {
-        right: 0;
+        top: 0;
         transition: 1s;
     }
     .header-nav .mini-menu-font2 {
