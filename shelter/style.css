@@ -88,7 +88,7 @@ time, mark, audio, video {
 }
 .nav-break {
     display: flex;
-    width: 478px;   
+    width: 478px;  
 }
 .nav-break li {
     list-style: none;
@@ -144,21 +144,19 @@ time, mark, audio, video {
         width: 94%;
         padding: 4% 3% 0% 3%;
     }
-    .none {
-        display: none;
-    }
+    
     .burger {
         display: flex;
         transition: 1s;
         position: relative;
         z-index: 2;
+        
     }
     .burger-turn {
-        transform: rotate(90deg);
+        transform: rotate(-90deg);
         transition: 1s;
     }
-    
-    .mini-menu {
+    .nav-break {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -166,7 +164,7 @@ time, mark, audio, video {
         height: 50vh;
         position: absolute;
         z-index: 2;
-        right: 0;
+        right: -100%;
         top:0;
         background-color: #292929;
         padding-top: calc(50vh - 163px);
@@ -174,8 +172,12 @@ time, mark, audio, video {
         padding-left: 28px;
         padding-right: 48px;
         transition: 1s;
+    }
+    .nav-break.nav-break-new {
+        right: 0;
+        transition: 1s;
     } 
-    .li-page.mini-menu-font {
+    .nav-break .li-page {
         text-align: center;
         font-size: 5vw;
         line-height: 160%;
@@ -1219,27 +1221,31 @@ footer {
     .none {
         display: none;
     }
-    .burger {
-        display: flex;
-    }
-    .mini-menu2 {
+    
+    .header-nav {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 243px; 
+        width: 70vw; 
+        height: 50vh;
         position: absolute;
         z-index: 1;
-        right: 0;
+        right: -100%;
         top:0;
         background-color: #fffcfc;
         padding-top: calc(50vh - 163px);
         padding-bottom: calc(50vh - 163px);
         padding-left: 28px;
         padding-right: 48px;
+        transition: 1s;
     } 
+    .header-nav-new {
+        right: 0;
+        transition: 1s;
+    }
     .header-nav .mini-menu-font2 {
         text-align: center;
-        font-size: 27px;
+        font-size: 5vw;
         line-height: 160%;
         letter-spacing: 0;
         margin-top: 20px;
