@@ -1,8 +1,11 @@
 const btn1 = document.querySelector('.btn1');
 const navPage = document.querySelector('.nav-break');
+const menuChecked = document.querySelector('.li-page');
+
 
 
 btn1.addEventListener("click", menuOne);
+
 
 function menuOne(event)  {
     btn1.classList.toggle('burger-turn');
