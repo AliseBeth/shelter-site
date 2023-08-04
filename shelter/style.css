@@ -1177,11 +1177,14 @@ footer {
 .header-nav li {
     list-style: none;
     margin-top: -5px;
+
+    margin-left: 35px;  
+    
 }
 .header-nav {
     display: flex;
     align-items: center;
-    width: 443px;
+    width: 478px;
     justify-content: space-between;
     color: #545454;
     font-size: 15px;
@@ -1221,7 +1224,6 @@ footer {
     .header-nav {
         display: flex;
         flex-direction: column;
-        align-items: center;
         width: 70vw; 
         height: 50vh;
         position: absolute;
