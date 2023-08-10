@@ -3,7 +3,11 @@ const navPage = document.querySelector('.nav-break');
 const menuClose = document.querySelector('main');
 const menuPoint = document.querySelectorAll('.li-page');
 
-
+const screenWidth = window.screen.availWidth
+const arrowLeft = document.querySelector('.arrow.one');
+const arrowRight = document.querySelector('.arrow.two');
+const petsCards= document.querySelectorAll('.pet-card');
+let a = 0;
 
 btn1.addEventListener("click", menuOne);
 
@@ -12,6 +16,11 @@ menuClose.addEventListener("click", menuClosed);
 for(var i = 0; i < menuPoint.length; i++) {
     menuPoint[i].addEventListener("click", menuClosed);
 }
+
+
+arrowLeft.addEventListener('click', replyMeLeft);
+arrowRight.addEventListener('click', replyMeRight);
+
 
 function menuOne(event)  {
     btn1.classList.toggle('burger-turn');
@@ -36,4 +45,27 @@ function menuClosed(event)  {
     } 
 };
 
+function replyMeRight(event)  {
+    if (screenWidth > 1279) { 
+        a++;
+        console.log('число зверя сейчас ', a);  
+        if (a >= petsCards.length - 2) { 
+            a = 0;
+            petsCards[0].classList.remove('disabled-for-full');
+            petsCards[1].classList.remove('disabled-for-full');
+            petsCards[2].classList.remove('disabled-for-full');
+            petsCards[5].classList.add('disabled-for-full');
+            petsCards[6].classList.add('disabled-for-full');
+            petsCards[7].classList.add('disabled-for-full');
+        } else { 
+            petsCards[a - 1].classList.add('disabled-for-full');
+            petsCards[a + 2].classList.remove('disabled-for-full');
+            console.log('сработало элс');
+        }
+    }
+}
 
+
+function replyMeLeft(event)  {
+    console.log('oh hi mark');
+}
