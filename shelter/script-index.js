@@ -1,12 +1,17 @@
 const btn1 = document.querySelector('.btn1');
 const navPage = document.querySelector('.nav-break');
 const menuClose = document.querySelector('main');
+const menuPoint = document.querySelectorAll('.li-page');
 
 
 
 btn1.addEventListener("click", menuOne);
 
 menuClose.addEventListener("click", menuClosed);
+
+for(var i = 0; i < menuPoint.length; i++) {
+    menuPoint[i].addEventListener("click", menuClosed);
+}
 
 function menuOne(event)  {
     btn1.classList.toggle('burger-turn');
@@ -30,4 +35,5 @@ function menuClosed(event)  {
         }
     } 
 };
+
 
