@@ -48,7 +48,6 @@ function menuClosed(event)  {
 function replyMeRight(event)  {
     if (screenWidth > 1279) { 
         a++;
-        console.log('число зверя сейчас ', a);  
         if (a >= petsCards.length - 2) { 
             a = 0;
             petsCards[0].classList.remove('disabled-for-full');
@@ -60,10 +59,35 @@ function replyMeRight(event)  {
         } else { 
             petsCards[a - 1].classList.add('disabled-for-full');
             petsCards[a + 2].classList.remove('disabled-for-full');
-            console.log('сработало элс');
+        }
+    } else if ((screenWidth <= 1279) && (screenWidth > 767)) {
+        a++;
+        if (a >= petsCards.length - 1) { 
+            a = 0;
+            petsCards[0].classList.remove('disabled-for-768');
+            petsCards[1].classList.remove('disabled-for-768');
+            petsCards[6].classList.add('disabled-for-768');
+            petsCards[7].classList.add('disabled-for-768');
+        } else { 
+            petsCards[a - 1].classList.add('disabled-for-768');
+            petsCards[a + 1].classList.remove('disabled-for-768');
+            petsCards[a + 1].classList.remove('disabled-for-full');
+        }
+    } else if (screenWidth <= 767) {
+        a++;
+        if (a >= petsCards.length) { 
+            a = 0;
+            petsCards[0].classList.remove('disabled-for-320');
+            petsCards[7].classList.add('disabled-for-320');
+        } else { 
+            petsCards[a - 1].classList.add('disabled-for-320');
+            petsCards[a].classList.remove('disabled-for-320');
+            petsCards[a].classList.remove('disabled-for-full');
+            petsCards[a].classList.remove('disabled-for-768');
         }
     }
 }
+
 
 
 function replyMeLeft(event)  {
