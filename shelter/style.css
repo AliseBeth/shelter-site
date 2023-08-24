@@ -561,10 +561,11 @@ h1 {
     cursor: pointer;
     transition: 0.5s;
 }
-
-.pets-cards .disabled-for-full {
-    display: none;
-}
+@media (min-width: 1280px) { 
+    .pets-cards .disabled-for-full {
+        display: none;
+    }
+} 
 
 @media (min-width: 768px) and (max-width: 1279px){ 
     .pets-cards .disabled-for-768 {
@@ -591,9 +592,7 @@ h1 {
 }
 
 @media (max-width: 767px){
-    .pets-cards .disabled-for-768 {
-        display: none;
-    }
+    
     .pets-cards .disabled-for-320 {
         display: none;
     }

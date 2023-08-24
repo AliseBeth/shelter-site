@@ -9,17 +9,22 @@ const arrowRight = document.querySelector('.arrow.two');
 const petsCards= document.querySelectorAll('.pet-card');
 let a = 0;
 
+
+
+
+
+
+
+window.addEventListener('resize', function () { 
+    "use strict";
+    window.location.reload(); 
+});
+
+
+
+
 btn1.addEventListener("click", menuOne);
 
-menuClose.addEventListener("click", menuClosed);
-
-for(var i = 0; i < menuPoint.length; i++) {
-    menuPoint[i].addEventListener("click", menuClosed);
-}
-
-
-arrowLeft.addEventListener('click', replyMeLeft);
-arrowRight.addEventListener('click', replyMeRight);
 
 
 function menuOne(event)  {
@@ -33,6 +38,15 @@ function menuOne(event)  {
 };
 
 
+
+menuClose.addEventListener("click", menuClosed);
+
+
+for(var i = 0; i < menuPoint.length; i++) {
+    menuPoint[i].addEventListener("click", menuClosed);
+}
+
+
 function menuClosed(event)  {
     if (btn1.classList.contains('burger-turn')) {
         btn1.classList.toggle('burger-turn');
@@ -44,6 +58,13 @@ function menuClosed(event)  {
         }
     } 
 };
+
+
+
+
+arrowLeft.addEventListener('click', replyMeLeft);
+arrowRight.addEventListener('click', replyMeRight);
+
 
 function replyMeRight(event)  {
     if (screenWidth > 1279) { 
@@ -71,7 +92,7 @@ function replyMeRight(event)  {
         } else { 
             petsCards[a - 1].classList.add('disabled-for-768');
             petsCards[a + 1].classList.remove('disabled-for-768');
-            petsCards[a + 1].classList.remove('disabled-for-full');
+
         }
     } else if (screenWidth <= 767) {
         a++;
@@ -82,8 +103,7 @@ function replyMeRight(event)  {
         } else { 
             petsCards[a - 1].classList.add('disabled-for-320');
             petsCards[a].classList.remove('disabled-for-320');
-            petsCards[a].classList.remove('disabled-for-full');
-            petsCards[a].classList.remove('disabled-for-768');
+            
         }
     }
 }
