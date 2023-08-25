@@ -92,7 +92,6 @@ function replyMeRight(event)  {
         } else { 
             petsCards[a - 1].classList.add('disabled-for-768');
             petsCards[a + 1].classList.remove('disabled-for-768');
-
         }
     } else if (screenWidth <= 767) {
         a++;
@@ -111,5 +110,44 @@ function replyMeRight(event)  {
 
 
 function replyMeLeft(event)  {
-    console.log('oh hi mark');
+    if (screenWidth > 1279) { 
+        a = a - 1;
+        if (a < 0) {
+            a = petsCards.length - 3;
+            petsCards[5].classList.remove('disabled-for-full');
+            petsCards[6].classList.remove('disabled-for-full');
+            petsCards[7].classList.remove('disabled-for-full');
+            petsCards[0].classList.add('disabled-for-full');
+            petsCards[1].classList.add('disabled-for-full');
+            petsCards[2].classList.add('disabled-for-full');
+        } else { 
+            petsCards[a].classList.remove('disabled-for-full');
+            petsCards[a + 3].classList.add('disabled-for-full');
+        }
+    } else if ((screenWidth <= 1279) && (screenWidth > 767)) {
+        a = a - 1;
+        if (a < 0) { 
+            a = petsCards.length - 2;
+            petsCards[0].classList.add('disabled-for-768');
+            petsCards[1].classList.add('disabled-for-768');
+            petsCards[6].classList.remove('disabled-for-768');
+            petsCards[7].classList.remove('disabled-for-768');
+        } else { 
+            petsCards[a].classList.remove('disabled-for-768');
+            petsCards[a + 2].classList.add('disabled-for-768');
+        }
+    } else if (screenWidth <= 767) {
+        a = a - 1;
+        if (a < 0) { 
+            a = petsCards.length - 1;
+            petsCards[0].classList.add('disabled-for-320');
+            petsCards[7].classList.remove('disabled-for-320');
+        } else { 
+            petsCards[a].classList.remove('disabled-for-320');
+            petsCards[a + 1].classList.add('disabled-for-320');
+            
+        }
+    }
+        
+        
 }

@@ -561,6 +561,20 @@ h1 {
     cursor: pointer;
     transition: 0.5s;
 }
+
+.pet-card {
+    animation: fade;
+    animation-duration: 1.5s;
+}
+@keyframes fade {
+    from {
+        opacity: 0.1
+    }
+    to {
+        opacity: 1
+    }
+}
+
 @media (min-width: 1280px) { 
     .pets-cards .disabled-for-full {
         display: none;
