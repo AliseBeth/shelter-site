@@ -7,7 +7,7 @@ const screenWidth = window.screen.availWidth
 const arrowLeft = document.querySelector('.arrow.one');
 const arrowRight = document.querySelector('.arrow.two');
 const petsCards= document.querySelectorAll('.pet-card');
-let a = 0;
+
 
 
 
@@ -64,7 +64,7 @@ function menuClosed(event)  {
 
 arrowLeft.addEventListener('click', replyMeLeft);
 arrowRight.addEventListener('click', replyMeRight);
-
+let a = 0;
 
 function replyMeRight(event)  {
     if (screenWidth > 1279) { 
