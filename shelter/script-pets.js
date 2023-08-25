@@ -2,12 +2,16 @@
 const btn2 = document.querySelector('.btn2');
 const navPage2 = document.querySelector('.header-nav');
 const menuClose = document.querySelector('main');
-
+const menuPoint = document.querySelectorAll('.li-page');
 
 
 btn2.addEventListener("click", menuTwo);
 
 menuClose.addEventListener("click", menuClosed);
+
+for(var i = 0; i < menuPoint.length; i++) {
+    menuPoint[i].addEventListener("click", menuClosed);
+}
 
 function menuTwo(event) {
     
