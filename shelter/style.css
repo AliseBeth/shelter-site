@@ -1382,6 +1382,11 @@ main {
 
 
 
+@media (min-width: 1280px){ 
+    
+}
+
+
 @media (min-width: 768px) and (max-width: 1279px){ 
     .page2 {
         width: 94%;
