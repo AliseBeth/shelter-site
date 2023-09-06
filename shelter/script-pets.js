@@ -48,10 +48,11 @@ function menuClosed(event)  {
 
 const petsCards= document.querySelectorAll('.card');
 
-const fistArrow = document.querySelector('.first-ar');
+const firstArrow = document.querySelector('.first-ar');
 const lastArrow = document.querySelector('.last-ar');
 const prevArrow = document.querySelector('.prev-ar');
 const nextArrow = document.querySelector('.next-ar');
+
 let a = 1;
 
 
@@ -75,11 +76,42 @@ function doInactivePrev(event){
     prevArrow.classList.remove('active-arrow');
     prevArrow.removeEventListener("click", previousSlide);     
 };
+function doInactiveNext(event){
+    nextArrow.classList.add('inactive-arrow');
+    nextArrow.classList.remove('active-arrow');
+    nextArrow.removeEventListener("click", nextSlide);     
+};
+
+function doActiveLast(event){
+    lastArrow.classList.remove('inactive-arrow');
+    lastArrow.classList.add('active-arrow');
+    lastArrow.addEventListener("click", lastSlide);     
+}
+function doInactiveLast(event){
+    lastArrow.classList.add('inactive-arrow');
+    lastArrow.classList.remove('active-arrow');
+    lastArrow.removeEventListener("click", lastSlide);     
+}
+
+function doActiveFirst(event){
+    firstArrow.classList.remove('inactive-arrow');
+    firstArrow.classList.add('active-arrow');
+    firstArrow.addEventListener("click", firstSlide);     
+}
+function doInactiveFirst(event){
+    firstArrow.classList.add('inactive-arrow');
+    firstArrow.classList.remove('active-arrow');
+    firstArrow.removeEventListener("click", firstSlide);     
+}
+
 
 
 if (screenWidth <= 767) {
     doActiveNext();
+    doActiveLast();
 };
+
+
 
 
 function nextSlide(event) {
@@ -90,15 +122,16 @@ function nextSlide(event) {
         nextArrow.classList.add('inactive-arrow');
         nextArrow.removeEventListener("click", nextSlide);
         a++;
-        console.log(a)
-        doActivePrev()
+        doActivePrev();
+        doActiveFirst();
+        doInactiveLast();
     } else { 
         petsCards[a - 1].classList.add('disabled-for-320');
         petsCards[a + 2].classList.remove('disabled-for-320');
         a++;
-        console.log(a)
         if (a > 1) {
-            doActivePrev()
+            doActivePrev();
+            doActiveFirst();
         };  
         
     } 
@@ -112,19 +145,56 @@ function previousSlide(event) {
         petsCards[a + 1].classList.add('disabled-for-320');
         nextArrow.classList.add('active-arrow');
         nextArrow.classList.remove('inactive-arrow');   
-        console.log(a)
         a = a - 1;
-        console.log(a)
         doActiveNext();
+        doActiveLast();
     } else { 
-        console.log(a)
         petsCards[a - 2].classList.remove('disabled-for-320');
         petsCards[a + 1].classList.add('disabled-for-320');
         a = a - 1;
-        console.log(a)
         doActiveNext();
+        doActiveLast();
         if (a === 1) {
-            doInactivePrev()
+            doInactivePrev();
+            doInactiveFirst();
         };  
     };
+}
+
+
+function lastSlide(event) {
+    
+    a = 0;
+    while (a < petsCards.length) {
+        petsCards[a].classList.add('disabled-for-320');
+        a++;
+    }
+
+    a = petsCards.length - 3
+    petsCards[a].classList.remove('disabled-for-320');
+    petsCards[a + 1].classList.remove('disabled-for-320');
+    petsCards[a + 2].classList.remove('disabled-for-320');
+    a++;
+    doActiveFirst();
+    doActivePrev();
+    doInactiveNext();
+    doInactiveLast();      
+}
+
+
+function firstSlide(event) {
+    a = 0;
+    while (a < petsCards.length) {
+        petsCards[a].classList.add('disabled-for-320');
+        a++;
+    }
+    a = 0;
+    petsCards[a].classList.remove('disabled-for-320');
+    petsCards[a + 1].classList.remove('disabled-for-320');
+    petsCards[a + 2].classList.remove('disabled-for-320');
+    a++;
+    doInactiveFirst();
+    doInactivePrev();
+    doActiveNext();
+    doActiveLast();      
 }

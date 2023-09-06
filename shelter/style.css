@@ -1346,19 +1346,13 @@ main {
     font-size: 20px;
 }
 .page2-arrows {
-    display: flex;
-    width: 340px;
-    justify-content: space-between;
-    margin-top: 60px;
-    cursor: pointer;
+    display: none;
 }
 .page2-arrows .inactive-arrow {
     border: #CDCDCD solid 2px;
     color: #CDCDCD;
 }
-.page2-arrows .number {
-    background-color: #F1CDB3;
-}
+
 .page2-info :hover button {
     background-color: #FDDCC4;
     border: #FDDCC4 solid 2px;
@@ -1379,12 +1373,13 @@ main {
     background-color: #ca9168;
     border: #ca9168 solid 2px;
 }
-
-
-
-@media (min-width: 1280px){ 
-    
+.card {
+    animation: fade;
+    animation-duration: 1.5s;
 }
+
+
+
 
 
 @media (min-width: 768px) and (max-width: 1279px){ 
@@ -1405,9 +1400,7 @@ main {
         margin: 0px 2vw;
         margin-top: 30px;
     }
-    .page2-arrows {
-        margin-top: 40px;
-    }
+    
 }
 
 @media  (max-width: 767px){
@@ -1435,7 +1428,11 @@ main {
         margin-top: 42px;
         cursor: pointer;
         margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
     }
+    
+    
     .page2-info .disabled-for-320{
         display: none;
     }
