@@ -147,7 +147,27 @@ function replyMeLeft(event)  {
             petsCards[a + 1].classList.add('disabled-for-320');
             
         }
-    }
+    }        
         
-        
+}
+
+
+
+
+
+
+const btnKatrine = document.querySelector('.but-katrine');
+
+
+
+
+
+
+function showKatrine(event) {
+    console.log('hi')
+    let diva = document.createElement('div');
+    diva.className = "alert";
+    diva.innerHTML = "<strong>Всем привет!</strong> Вы прочитали важное сообщение.";
+
+    magic.after(diva);
 }

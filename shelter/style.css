@@ -443,6 +443,12 @@ h1 {
 
 .pets {
     background-color: #F6F6F6;
+    z-index: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
 .pets-info {
     background-color: #F6F6F6;
@@ -574,6 +580,42 @@ h1 {
         opacity: 1
     }
 }
+
+
+.pop-up {
+    position: absolute;
+    z-index: 2;
+    width: 900px;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.pop-info {
+    display: flex;
+    background-color: #ff6b01;
+    border-radius: 9px;
+}
+.pop-cross {
+    position: absolute;
+    right: -60px;
+    top: -60px;
+    width: 12px;
+    border: #F1CDB3 solid 2px;
+    border-radius: 100px;
+    padding: 20px;
+}
+.pop-cross:hover {
+    background-color: #FDDCC4;
+    transition: 0.5s;
+    border: #FDDCC4 solid 2px;
+    cursor: pointer;
+}
+.pop-cross:active {
+    background-color: #ca9168;
+    border: #ca9168 solid 2px;
+}
+
 
 @media (min-width: 1280px) { 
     .pets-cards .disabled-for-full {
