@@ -14,15 +14,6 @@ const petsCards= document.querySelectorAll('.pet-card');
 
 
 
-
-window.addEventListener('resize', function () { 
-    "use strict";
-    window.location.reload(); 
-});
-
-
-
-
 btn1.addEventListener("click", menuOne);
 
 

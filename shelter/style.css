@@ -584,7 +584,7 @@ h1 {
 
 .pop-up {
     position: absolute;
-    z-index: 2;
+    z-index: 3;
     width: 900px;
     height: 500px;
     display: flex;
@@ -615,6 +615,20 @@ h1 {
     background-color: #ca9168;
     border: #ca9168 solid 2px;
 }
+
+.pets-info::before {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    background-color: #020202;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+}
+
 
 
 @media (min-width: 1280px) { 
