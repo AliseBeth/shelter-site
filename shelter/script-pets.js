@@ -6,10 +6,6 @@ const menuPoint = document.querySelectorAll('.li-page');
 const screenWidth = window.screen.availWidth
 
 
-window.addEventListener('resize', function () { 
-    "use strict";
-    window.location.reload(); 
-});
 
 
 btn2.addEventListener("click", menuTwo);
