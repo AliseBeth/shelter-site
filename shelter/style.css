@@ -581,6 +581,10 @@ h1 {
     }
 }
 
+.pet-card img {
+    border-radius: 9px 9px 0px 0px;
+}
+
 
 .pop-up {
     position: absolute;
@@ -590,10 +594,12 @@ h1 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 15px;
 }
 .pop-info {
     display: flex;
-    background-color: #ff6b01;
+    background-color: #fafafa;
     border-radius: 9px;
 }
 .pop-cross {
@@ -615,8 +621,10 @@ h1 {
     background-color: #ca9168;
     border: #ca9168 solid 2px;
 }
-
-.pets-info::before {
+.pop-img {
+    border-radius: 8px 0px 0px 8px;
+}
+.pseudo::before {
     content: '';
     position: absolute;
     z-index: 2;
@@ -626,10 +634,37 @@ h1 {
     left: 0;
     right: 0;
     bottom: 0;
-    display: none;
+    
 }
-
-
+.pop-text {
+    padding: 50px 20px 88px 29px;
+}
+.pop-text h2 {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+.pop-text h4 {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+.pop-text p {
+    margin-bottom: 40px;
+}
+b {
+    font-weight: 600;
+}
+.pop-text ul{
+    list-style: none;
+}
+.pop-text ul li::before {
+    content: "\2022";
+    color: #F1CDB3;
+    display: inline-block;
+    width: 1em;
+}
+.pop-text ul li {
+    margin-bottom: 10px;
+}
 
 @media (min-width: 1280px) { 
     .pets-cards .disabled-for-full {

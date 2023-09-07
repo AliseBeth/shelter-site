@@ -67,19 +67,19 @@
                     <button class="arrow one"><img src="../shelter/img/arrow-left.svg" alt="arrow"></button>
                     <ul class="pets-cards">
                         <li class="pet-card">
-                            <img src="../shelter/img/pets-katrine.png" alt="katrine">
+                            <img src="../shelter/img/pets-katrine.jpg" alt="katrine">
                             <p>Katrine</p>
                             <button class="but-katrine" onclick="showKatrine()">Learn more</button>
                         </li>
                         <li class="pet-card disabled-for-320">
-                            <img src="../shelter/img/pets-jennifer.png" alt="jennifer">
+                            <img src="../shelter/img/pets-jennifer.jpg" alt="jennifer">
                             <p>Jennifer</p>
-                            <button>Learn more</button>
+                            <button class="but-jennifer" onclick="showJennifer()">Learn more</button>
                         </li>
                         <li class="pet-card disabled-for-320 disabled-for-768">
-                            <img src="../shelter/img/pets-woody.png" alt="woody">
+                            <img src="../shelter/img/pets-woody.jpg" alt="woody">
                             <p>Woody</p>
-                            <button>Learn more</button>
+                            <button class="but-woody" onclick="showWoody()">Learn more</button>
                         </li>
                         <li class="pet-card disabled-for-320 disabled-for-768 disabled-for-full">
                             <img src="../shelter/img/pets-sophia.png" alt="sophia">
@@ -113,6 +113,7 @@
                     <button class="get-to-know">Get to know the rest</button>
                 </form>
             </div>
+            <div class="back"></div>
         </section>
 
         <section id='help-shelter' class="help">
@@ -223,17 +224,30 @@
         function showKatrine(event) {
             let katrine = document.createElement('div');
             katrine.className = "pop-up";
-            katrine.innerHTML = '<div class="pop-info"><img class="pop-img" src="../shelter/img/pets-katrine.png" alt="katrine"> <div><h2 class="popname">Katrine</h2><p>Cat - British Shorthair</p><p>Katrine is a beautiful girl. She is as soft as the finest velvet with a thick lush fur. Will love you until the last breath she takes as long as you are the one. She is picky about her affection. She loves cuddles and to stretch into your hands for a deeper relaxations.</p><ul><li>Age: 3 months</li><li>Inoculations: none</li><li>Diseases: none</li><li>Parasites: none</li></ul></div></div><img class="pop-cross" onclick="deleteKatrine()" src="../shelter/img/icon-cross.svg" alt="icon">';
+            katrine.innerHTML = '<div class="pop-info"><img class="pop-img" src="../shelter/img/pets-katrine.jpg" alt="katrine"> <div class="pop-text"><h2 class="popname">Katrine</h2><h4>Cat - British Shorthair</h4><p>Katrine is a beautiful girl. She is as soft as the finest velvet with a thick lush fur. Will love you until the last breath she takes as long as you are the one. She is picky about her affection. She loves cuddles and to stretch into your hands for a deeper relaxations.</p><ul><li><b>Age:</b> 3 months</li><li><b>Inoculations:</b> none</li><li><b>Diseases:</b> none</li><li><b>Parasites:</b> none</li></ul></div></div><img class="pop-cross" onclick="deletePop()" src="../shelter/img/icon-cross.svg" alt="icon">';
             magic.after(katrine);
-            document.querySelector('.but-katrine').onclick = null;
-            
-        };
-
-        function deleteKatrine(event) {
-            document.querySelector('.pop-up').remove();
-            document.querySelector('.but-katrine').onclick = showKatrine;
+            document.querySelector('.back').classList.toggle('pseudo');
         };
         
+        function deletePop(event) {
+            document.querySelector('.pop-up').remove();
+            document.querySelector('.back').classList.toggle('pseudo');
+        };
+        
+        function showJennifer(event) {
+            let jennifer = document.createElement('div');
+            jennifer.className = "pop-up";
+            jennifer.innerHTML = '<div class="pop-info"><img class="pop-img" src="../shelter/img/pets-jennifer.jpg" alt="jen"> <div class="pop-text"><h2 class="popname">Jennifer</h2><h4>Dog - Labrador</h4><p>Jennifer is a sweet 2 months old Labrador that is patiently waiting to find a new forever home. This girl really enjoys being able to go outside to run and play, but won\'t hesitate to play up a storm in the house if she has all of her favorite toys.</p><ul><li><b>Age:</b> 2 months</li><li><b>Inoculations:</b> none</li><li><b>Diseases:</b> none</li><li><b>Parasites:</b> none</li></ul></div></div><img class="pop-cross" onclick="deletePop()" src="../shelter/img/icon-cross.svg" alt="icon">';
+            magic.after(jennifer);
+            document.querySelector('.back').classList.toggle('pseudo');
+        };
+        function showWoody(event) {
+            let woody = document.createElement('div');
+            woody.className = "pop-up";
+            woody.innerHTML = '<div class="pop-info"><img class="pop-img" src="../shelter/img/pets-woody.jpg" alt="woody"> <div class="pop-text"><h2 class="popname">Woody</h2><h4>Dog - Golden Retriever</h4><p>Woody is a handsome 3 1/2 year old boy. Woody does know basic commands and is a smart pup. Since he is on the stronger side, he will learn a lot from your training. Woody will be happier when he finds a new family that can spend a lot of time with him.</p><ul><li><b>Age:</b> 3,5 years</li><li><b>Inoculations:</b> none</li><li><b>Diseases:</b> none</li><li><b>Parasites:</b> none</li></ul></div></div><img class="pop-cross" onclick="deletePop()" src="../shelter/img/icon-cross.svg" alt="icon">';
+            magic.after(woody);
+            document.querySelector('.back').classList.toggle('pseudo');
+        };
 
         
     </script>
