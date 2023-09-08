@@ -443,6 +443,12 @@ h1 {
 
 .pets {
     background-color: #F6F6F6;
+    z-index: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
 .pets-info {
     background-color: #F6F6F6;
@@ -573,6 +579,91 @@ h1 {
     to {
         opacity: 1
     }
+}
+
+.pet-card img {
+    border-radius: 9px 9px 0px 0px;
+}
+
+
+.pop-up {
+    position: absolute;
+    z-index: 3;
+    width: 900px;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 15px;
+}
+.pop-info {
+    display: flex;
+    background-color: #fafafa;
+    border-radius: 9px;
+}
+.pop-cross {
+    position: absolute;
+    right: -60px;
+    top: -60px;
+    width: 12px;
+    border: #F1CDB3 solid 2px;
+    border-radius: 100px;
+    padding: 20px;
+}
+.pop-cross:hover {
+    background-color: #FDDCC4;
+    transition: 0.5s;
+    border: #FDDCC4 solid 2px;
+    cursor: pointer;
+}
+.pop-cross:active {
+    background-color: #ca9168;
+    border: #ca9168 solid 2px;
+}
+.pop-img {
+    border-radius: 8px 0px 0px 8px;
+}
+.pseudo::before {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    background-color: #020202;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+}
+.pop-text {
+    padding: 50px 20px 88px 29px;
+}
+.pop-text h2 {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+.pop-text h4 {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+.pop-text p {
+    margin-bottom: 40px;
+}
+b {
+    font-weight: 600;
+}
+.pop-text ul{
+    list-style: none;
+}
+.pop-text ul li::before {
+    content: "\2022";
+    color: #F1CDB3;
+    display: inline-block;
+    width: 1em;
+}
+.pop-text ul li {
+    margin-bottom: 10px;
 }
 
 @media (min-width: 1280px) { 
@@ -930,7 +1021,7 @@ footer {
     background-size: cover;
 }
 .footer-info {
-    margin-top: 5px;
+    margin-top: 0px;
     background-repeat: no-repeat;
     margin-left: auto;
     margin-right: auto;
@@ -1276,6 +1367,12 @@ footer {
 main {
     background-color: #F6F6F6;
 }
+.pets-page2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
 .page2 {
     background-color: #F6F6F6;
     display: flex;
@@ -1286,6 +1383,7 @@ main {
     width: 1200px;
     padding: 80px 40px 100px 40px;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    z-index: 1 ;
 }
 .page2 h2 {
     line-height: 130%;
@@ -1376,6 +1474,9 @@ main {
 .card {
     animation: fade;
     animation-duration: 1.5s;
+}
+.card img {
+    border-radius: 9px 9px 0px 0px;
 }
 
 
