@@ -194,3 +194,4 @@ function firstSlide(event) {
     doActiveNext();
     doActiveLast();      
 }
+

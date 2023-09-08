@@ -1021,7 +1021,7 @@ footer {
     background-size: cover;
 }
 .footer-info {
-    margin-top: 5px;
+    margin-top: 0px;
     background-repeat: no-repeat;
     margin-left: auto;
     margin-right: auto;
@@ -1367,6 +1367,12 @@ footer {
 main {
     background-color: #F6F6F6;
 }
+.pets-page2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
 .page2 {
     background-color: #F6F6F6;
     display: flex;
@@ -1377,6 +1383,7 @@ main {
     width: 1200px;
     padding: 80px 40px 100px 40px;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    z-index: 1 ;
 }
 .page2 h2 {
     line-height: 130%;
@@ -1467,6 +1474,9 @@ main {
 .card {
     animation: fade;
     animation-duration: 1.5s;
+}
+.card img {
+    border-radius: 9px 9px 0px 0px;
 }
 
 
