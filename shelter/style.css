@@ -604,7 +604,7 @@ h1 {
 }
 .pop-cross {
     position: absolute;
-    right: -60px;
+    right: -100px;
     top: -60px;
     width: 12px;
     border: #F1CDB3 solid 2px;
@@ -639,6 +639,7 @@ h1 {
 }
 .pop-text {
     padding: 50px 20px 88px 29px;
+    width: 400px;
 }
 .pop-text h2 {
     font-size: 35px;
