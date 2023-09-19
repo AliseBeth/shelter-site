@@ -639,6 +639,7 @@ h1 {
 }
 .pop-text {
     padding: 50px 20px 88px 29px;
+    width: 400px;
 }
 .pop-text h2 {
     font-size: 35px;
